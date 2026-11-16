@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TornadoSafe | Calhoun County</title>
+
+    <!-- Leaflet CSS -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    >
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>TornadoSafe</h1>
+        <p>Tornado Shelter Accessibility and Preparedness Planning</p>
+    </header>
+
+    <main>
+
+        <!-- Left Sidebar -->
+        <aside class="sidebar">
+
+            <section class="panel">
+                <h2>Find a Shelter</h2>
+                <p>
+                    Click a location on the map to explore
+                    nearby public tornado shelters in
+                    Calhoun County, Alabama.
+                </p>
+            </section>
+
+            
+<!-- Selected Location -->
+
+<section class="panel">
+    <h3>Selected Location</h3>
+
+    <div id="location-info">
+        No location selected. Click on any place inside the calhoun county to choose the location.
+    </div>
+
+    <button id="find-shelters" type="button">
+        Find Nearest Shelters
+    </button>
+
+    <button id="clear-location" type="button">
+        Clear Selection
+    </button>
+</section>
+
+
+
+            <!-- Nearby Shelters -->
+            <section class="panel">
+                <h3>Nearby Shelters</h3>
+
+                <div id="shelter-results">
+                    Nearby shelters will appear here after
+                    selecting a location.
+                </div>
+            </section>
+
+            <!-- Weather Alerts -->
+            <section class="panel">
+                <h3>Severe Weather Alerts</h3>
+
+                <div id="weather-alerts">
+                    Weather information will be available
+                    here once the NWS API is connected.
+                </div>
+            </section>
+
+        </aside>
+
+        <!-- Leaflet Map -->
+        <section class="map-container">
+            <div id="map"></div>
+        </section>
+
+    </main>
+
+
+
+    <!-- Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!-- Local API configuration -->
+    <script src="config.js"></script>
+
+    <!-- my JavaScript -->
+    <script src="app.js"></script>
+
+</body>
+</html>
